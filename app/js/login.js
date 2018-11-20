@@ -1,0 +1,15 @@
+require(["config"],function(){
+	require(["header"],function(header){
+		header.init();
+	});
+	require(["footer"],function(footer){
+		footer.init();
+	});	
+	require(["validation","login_validation"],function(validation,login_validation){
+		validation.yzm();
+		$("#change-yzm").on("click",function(){
+			validation.yzm();
+		});
+		login_validation.init();
+	});
+})

@@ -1,0 +1,21 @@
+require(["config"],function(){
+	require(["header"],function(header){
+		header.init();
+	});
+	require(["footer"],function(footer){
+		footer.init();
+	});
+	require(["lunbotu"],function(lunbotu){
+		lunbotu.init();
+	});
+	require(["xxka","choose_goods"],function(xxka,choose_goods){
+		xxka.init();
+		choose_goods.init();
+	});
+	require(["jquery","template"],function($,template){
+		$.ajax("http://rap2api.taobao.org/app/mock/117465/example/1542171573728").done(function(data){
+			var html = template("product",data)
+			$("#pro-list").html(html)
+		})
+	})
+})

@@ -1,0 +1,55 @@
+$xd-Clolr:#787878,#f8f8f8,#050304,#0184d4;
+$xdwidth:1263px,179px,660px;
+$xdheight:40px,35px,33px;
+$xdfloat:left,right;
+$xddisplay:block,inline-block,inline;
+$xd-lineheight:40px,35px;
+$xd-magrin:5px,8px,10px,25px,15px;
+$xd-fontsize:12px,14px;
+header{
+    width: 100%;
+    height:nth($xdheight,1);
+    background:nth($xd-Clolr,2);
+}
+header nav{
+    width:nth($xdwidth,1);
+    min-height: nth($xdheight,1);
+    margin: 0 auto;
+}
+header nav ul{
+    min-height: nth($xdheight,1);
+}
+header nav ul li{  
+    height: nth($xdheight,1);
+    font-size: nth($xd-fontsize,1);
+    padding-left: nth($xd-magrin,3);
+    padding-right: nth($xd-magrin,3);
+    line-height: nth($xd-lineheight,1);
+}
+header nav ul li a{
+    color: nth($xd-Clolr,1);
+}
+header nav ul li a:hover{
+    color: nth($xd-Clolr,3);
+}
+header nav .nav-left{
+    float: nth($xdfloat,1);
+}
+header nav .nav-left li{
+    float: nth($xdfloat,1);
+}
+header nav .nav-right{
+    float: nth($xdfloat,2);
+}
+header nav .nav-right li{
+    float: nth($xdfloat,1);
+}
+header nav .nav-right li:nth-child(3) a{
+    display: nth($xddisplay,2);
+    padding: 0 nth($xd-magrin,2);
+
+}
+header nav .nav-right li:nth-child(3) img{
+    margin-bottom: -8px;
+    margin-right: 2px;
+}
